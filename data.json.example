@@ -10,7 +10,7 @@
         "day":1,
         "events":[
             {
-                "name": "Meeting1",
+                "name":"Meeting1",
                 "startTime":"000100",
                 "endTime":"235900"
             }
@@ -20,7 +20,7 @@
         "day":2,
         "events":[
             {
-                "name": "Meeting2",
+                "name":"Meeting2",
                 "startTime":"000100",
                 "endTime":"235900"
             }
@@ -36,12 +36,12 @@
         "day":4,
         "events":[
             {
-                "name": "Meeting3",
+                "name":"Meeting3",
                 "startTime":"000100",
                 "endTime":"235900"
             },
             {
-                "name": "Meeting4",
+                "name":"Meeting4",
                 "startTime":"000100",
                 "endTime":"235900"
             }
