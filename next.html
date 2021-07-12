@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <noscript>Enable javascript to use</noscript>
+        <div>Please wait. Reload to request again.</div>
+        <script type="text/javascript">
+            function loadJSON(path, success, error)
+            {
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function()
+                {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            if (success)
+                                success(JSON.parse(xhr.responseText));
+                        } else {
+                            if (error)
+                                error(xhr);
+                        }
+                    }
+                };
+                xhr.open("GET", path, true);
+                xhr.send();
+            }
+            function processTime(time)
+            {
+                var now = new Date();
+                now.setHours(time.slice(0, 2),
+                             time.slice(2, 4),
+                             time.slice(4, 6));
+                return now.getTime();
+            }
+            function redirect(data)
+            {
+                let now = new Date().getTime();
+                let links = data.httplinks;
+                data = data.schedule[new Date().getDay()];
+                data = data.events;
+
+                for (let i = 0; i < Object.keys(data).length; i++) {
+                    var session = data[i];
+                    let startTime = processTime(session.startTime);
+                    let endTime = processTime(session.endTime);
+                    // find current 
+                    if (now < startTime + 5*60000) {
+                        console.log(session.name);
+                        window.location = links[session.name];
+                        break;
+                    }
+                }
+            }
+
+            loadJSON("data.json",
+                     function(data) { redirect(data); },
+                     function(xhr) { console.log(xhr); }
+                    );
+                        
+        </script>
+    </body>
+         
