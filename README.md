@@ -39,7 +39,7 @@ user's screen.
 Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.
 If there is no meeting for the day, leave `events` blank.
 
-An example is available at `data.json.example`.
+An example is available at [`data.json.example`](data.json.example).
 
 Meeting links are queried by name from `httplinks`. This means meeting names in the
 `schedule` block must match meeting names in the `httplinks` block.
