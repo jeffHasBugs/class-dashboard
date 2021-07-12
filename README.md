@@ -10,6 +10,8 @@ from a server periodically so that updates to the file will display instantly on
 user's screen. 
 
 #### data.json
+An example is available at `data.json.example`.
+
 ```
 "schedule":[
     {
@@ -36,13 +38,20 @@ user's screen.
     ...
 ]
 ```
-Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.
+and
+```
+"httplinks": {
+    "Meeting1":"[Your meeting link here]",
+    "Meeting2":"https://zoom.us/j/5000000000?pwd=00000",
+    "Meeting3":"https://zoom.us/j/5000000000?pwd=00000",
+    "Meeting4":"https://zoom.us/j/5000000000?pwd=00000"
+}
+```
+Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.  
 If there is no meeting for the day, leave `events` blank.
 
-An example is available at `data.json.example`.
-
-Meeting links are queried by name from `httplinks`. This means meeting names in the
-`schedule` block must match meeting names in the `httplinks` block.
+Meeting links are retrieved from the same `data.json` file.
+The names in the `events` clause must match names in the `httplinks` clause.
 
 #### Timetable
 
