@@ -36,7 +36,6 @@ An example is available at [`data.json.example`](data.json.example).
         ]
     },
     ...
-]
 ```
 and
 ```
@@ -53,14 +52,14 @@ If there is no meeting for the day, leave `events` blank.
 Meeting links are retrieved from the same `data.json` file.
 The names in the `events` clause must match names in the `httplinks` clause.
 
-Meeting links are queried by name from `httplinks`. This means meeting names in the
-`schedule` block must match meeting names in the `httplinks` block.
-
 #### Timetable
 
 A timetable can be shown. Replace the `timetable.jpg` file with your own `timetable.jpg`.
 
 #### Server
 
-Any service that can host your HTML, CSS, and JS.
-When you're done, you can drag the project folder to [https://app.netlify.com/drop](https://app.netlify.com/drop).
+Because we periodically request `data.json`, a server is needed.
+You can choose any service that hosts static sites for free.
+
+You can also drag the project folder to [https://app.netlify.com/drop](https://app.netlify.com/drop)
+for a quick start.
