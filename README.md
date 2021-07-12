@@ -50,15 +50,11 @@ and
 Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.  
 If there is no meeting for the day, leave `events` blank.
 
-<<<<<<< HEAD
 Meeting links are retrieved from the same `data.json` file.
 The names in the `events` clause must match names in the `httplinks` clause.
-=======
-An example is available at [`data.json.example`](data.json.example).
 
 Meeting links are queried by name from `httplinks`. This means meeting names in the
 `schedule` block must match meeting names in the `httplinks` block.
->>>>>>> cff6f931b597f4755aa1d84626f12d84979c7bb8
 
 #### Timetable
 
