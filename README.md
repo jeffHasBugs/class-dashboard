@@ -11,12 +11,8 @@ user's screen.
 
 An example is available at [`data.json.example`](data.json.example).
 
-Note:
-Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on. Meetings must be placed 
-in the order that they start.
-
-Meeting links are retrieved from the same `data.json` file, so meeting names must 
-match.
+Note: Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on. 
+Meetings must be placed in the order that they start.
 
 #### Timetable
 

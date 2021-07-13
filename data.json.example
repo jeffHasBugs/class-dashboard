@@ -11,8 +11,8 @@
         "events":[
             {
                 "name":"Meeting1",
-                "startTime":"000100",
-                "endTime":"235900"
+                "startTime":"100000",
+                "endTime":"110000"
             }
         ]
     },
@@ -21,8 +21,8 @@
         "events":[
             {
                 "name":"Meeting2",
-                "startTime":"000100",
-                "endTime":"235900"
+                "startTime":"110000",
+                "endTime":"123000"
             }
         ]
     },
@@ -37,13 +37,13 @@
         "events":[
             {
                 "name":"Meeting3",
-                "startTime":"000100",
-                "endTime":"235900"
+                "startTime":"100000",
+                "endTime":"110000"
             },
             {
                 "name":"Meeting4",
-                "startTime":"000100",
-                "endTime":"235900"
+                "startTime":"140000",
+                "endTime":"150000"
             }
         ]
     },
@@ -56,14 +56,18 @@
     {
         "day":6,
         "events":[
-            
+            {
+                "name":"Meeting2",
+                "startTime":"135000",
+                "endTime": "145000"
+            }
         ]
     }
 ],
 "httplinks": {
     "Meeting1":"[Your meeting link here]",
-    "Meeting2":"https://zoom.us/j/5000000000?pwd=00000",
-    "Meeting3":"https://zoom.us/j/5000000000?pwd=00000",
+    "Meeting2":"[Your meeting link here]",
+    "Meeting3":"[Your meeting link here]",
     "Meeting4":"https://zoom.us/j/5000000000?pwd=00000"
 }
 }
