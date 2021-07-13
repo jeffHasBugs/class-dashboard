@@ -9,57 +9,22 @@ The dashboard is controlled with a `json` file. The `data.json` file is requeste
 from a server periodically so that updates to the file will display instantly on the 
 user's screen. 
 
-#### data.json
 An example is available at [`data.json.example`](data.json.example).
 
-```
-"schedule":[
-    {
-        "day":0,
-        "events":[
-        
-        ]
-    },
-    {
-        "day":1,
-        "events":[
-            {
-                "name":"Meeting1",
-                "startTime":"093000",
-                "endTime":"103000"
-            },
-            {
-                "name":"Meeting2",
-                "startTime":"110000",
-                "endTime":"123000"
-            }
-        ]
-    },
-    ...
-```
-and
-```
-"httplinks": {
-    "Meeting1":"[Your meeting link here]",
-    "Meeting2":"https://zoom.us/j/5000000000?pwd=00000",
-    "Meeting3":"https://zoom.us/j/5000000000?pwd=00000",
-    "Meeting4":"https://zoom.us/j/5000000000?pwd=00000"
-}
-```
-Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.  
-If there is no meeting for the day, leave `events` blank.
+Note:
+Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on. Meetings must be placed 
+in the order that they start.
 
-Meeting links are retrieved from the same `data.json` file.
-The names in the `events` clause must match names in the `httplinks` clause.
+Meeting links are retrieved from the same `data.json` file, so meeting names must 
+match.
 
 #### Timetable
 
-A timetable can be shown. Replace the `timetable.jpg` file with your own `timetable.jpg`.
+Replace the `timetable.jpg` file with your own `timetable.jpg`.
 
 #### Server
 
 Because we periodically request `data.json`, a server is needed.
 You can choose any service that hosts static sites for free.
 
-You can also drag the project folder to [https://app.netlify.com/drop](https://app.netlify.com/drop)
-for a quick start.
+Quick start: You can also drag the project folder to [https://app.netlify.com/drop](https://app.netlify.com/drop)
