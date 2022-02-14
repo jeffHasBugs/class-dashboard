@@ -7,9 +7,6 @@ controlled with a `json` file.
 
 The dashboard needs a `data.json` file to function.
 
-When set up correctly, the `data.json` file is requested from a server periodically 
-such that changes to the file takes effect immediately.
-
 An example of `data.json` is available at [`data.json.example`](data.json.example).
 
 Day 0 is a Sunday, day 1 Monday, day 6 Saturday, and so on.  Meetings must be placed 
@@ -27,7 +24,9 @@ Replace the blank `timetable.jpg` file with your own `timetable.jpg`. This is op
 With `data.json` and `timetable.jpg` ready, you now have a fully functional dashboard.
 
 Because browsers don't allow us to make `XMLHTTPRequest`s (updating the timetable live) 
-without a server, the easiest method would be to drag the entire project folder to 
-
+without a server, the easiest method to deploy the project would be to drag the entire 
+project folder to 
 [https://app.netlify.com/drop](https://app.netlify.com/drop).
+
+and use the resulting URL.
 
